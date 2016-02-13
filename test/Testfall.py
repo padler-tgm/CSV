@@ -1,15 +1,24 @@
 import unittest
-
-from src.upload import *
+import csv
+from CSV.src.upload import Main, View, Model
 
 
 class TestAllgemein(unittest.TestCase):
-    def setUp(self):
-        self.b = Bruch(3, 2)
-        self.b2 = Bruch(self.b)
-        self.b3 = Bruch(4, 2)
-        pass
+    def test_empytCSV(self):
+        with open('empty.csv', newline='') as csvfile:
+            self.assertEqual(Main.csv_reader(csvfile), [])
 
-    def tearDown(self):
-        del self.b, self.b3
-        pass
+    def test_noCSV(self):
+            self.assertRaises(FileNotFoundError, open, '', newline='')
+
+    def test_normalCSV_1row(self):
+        with open('Datei1.csv', newline='') as csvfile:
+            self.assertEqual(Main.csv_reader(csvfile), [['1', '1']])
+
+    def test_normalCSV_2row(self):
+        with open('Datei2.csv', newline='') as csvfile:
+            self.assertEqual(Main.csv_reader(csvfile), [['1', '1'], ['2', '2']])
+
+    def test_delimiter(self):
+        with open('Datei3.csv', newline='') as csvfile:
+            self.assertIsNot(Main.csv_reader(csvfile), [['1', '1']])

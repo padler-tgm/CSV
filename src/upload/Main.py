@@ -2,7 +2,7 @@ import csv
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-import View, Model
+from CSV.src.upload import View, Model
 import sys
 
 class Controller(QWidget):
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     """
     Main-Methode ruft den Controller auf
     """
-    with open('Datei.csv', newline='') as csvfile:
+    with open('Datei1.csv', newline='') as csvfile:
         csv_reader(csvfile, True)
     app = QApplication(sys.argv)
     c = Controller()
