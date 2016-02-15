@@ -1,7 +1,6 @@
 import unittest
 
-from CSV.upload import Main
-
+import Main
 
 class TestAllgemein(unittest.TestCase):
     def test_empytCSV(self):
