@@ -1,5 +1,5 @@
 import unittest
-from src.upload import Main
+import Main
 
 
 class TestAllgemein(unittest.TestCase):
