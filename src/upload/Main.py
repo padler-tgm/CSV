@@ -2,7 +2,7 @@ import csv
 #from PyQt5.QtCore import *
 #from PyQt5.QtWidgets import *
 #from PyQt5.QtGui import *
-from CSV.src.upload import View, Model
+#from CSV.src.upload import View, Model
 import sys
 
 """
