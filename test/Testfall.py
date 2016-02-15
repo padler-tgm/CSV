@@ -1,5 +1,4 @@
 import unittest
-import csv
 from CSV.src.upload import Main
 
 
