@@ -28,7 +28,7 @@ class TestAllgemein(unittest.TestCase):
             self.assertEqual(csv_reader(csvfile), [['1', '1']])
 
     def test_normalCSV_2row(self):
-        with open('Datei2.csv', newline='') as csvfile:
+        with open("Datei.csv", newline='') as csvfile:
             self.assertEqual(csv_reader(csvfile), [['1', '1'], ['2', '2']])
 
     def test_delimiter(self):
