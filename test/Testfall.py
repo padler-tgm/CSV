@@ -1,6 +1,6 @@
 import unittest
-import csv
-import upload.Main
+
+from CSV import Main
 
 
 class TestAllgemein(unittest.TestCase):
